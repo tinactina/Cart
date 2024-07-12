@@ -1,0 +1,71 @@
+.body {
+  background-color: black;
+}
+
+.photo-six {
+  width: 100%;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+#my-login-father {
+  left: -130px;
+}
+
+.nav-link:hover {
+  color: rgb(178, 197, 88);
+}
+
+
+.bi-1-circle-fill,
+.bi-2-circle-fill,
+.bi-3-circle-fill,
+.bi-4-circle-fill {
+  color: rgb(88, 143, 111);
+}
+
+.navbar-toggler {
+  background-color: rgb(223, 225, 223);
+}
+
+.receipt {
+  font-size: 16px;
+  color: rgb(125, 125, 125);
+
+}
+
+.card-text {
+  font-size: 14px;
+  color: rgb(125, 125, 125);
+
+}
+
+.number-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: rgb(133, 177, 155);
+  color: antiquewhite;
+  font-size: 20px;
+  text-align: center;
+}
+
+.number-circle-1 {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: rgb(171, 171, 171);
+  color: antiquewhite;
+  font-size: 20px;
+  text-align: center;
+}
+
+.progress {
+  width: calc(100% - 100px);
+  top: 20%;
+  left: 99%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
