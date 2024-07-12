@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[ ✷ 情感釀造所 ✷ ] </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./css/Bs-cart.css">
+</head>
+
+<body>
+  <header>
+    <div class="container ">
+      <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="./Bs-homepage.html">
+          <img src="./img/情感釀造所-01.png" alt="情感釀造所 Logo" width="250">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-normal">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link bi bi-cart-fill" href="http://127.0.0.1:5500/Bs-cart.html"></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle bi bi-person-circle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">&nbsp;</a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item bi bi-person-circle" href="./Bs-cart-login.html">&nbsp;登入/註冊</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    </div>
+    </nav>
+  </header>
+  <main class="container bg-light p-1 p-md-5 fs-4 m-5 d-block">
+    <h4>購 物 車</h4>
+    <div class="row row-cols-4 text-center my-5">
+      <div class="col position-relative">
+        <div class="number-circle mx-auto"><span>1</span></div>
+        <div class="description">確認購物車</div>
+        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0"
+          aria-valuemax="100">
+          <div class="progress-bar bg-black" style="width: 100%"></div>
+        </div>
+      </div>
+      <div class="col position-relative">
+        <div class="number-circle mx-auto"><span>2</span></div>
+        <div class="description">付款與運送方式</div>
+        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0"
+          aria-valuemax="100">
+          <div class="progress-bar bg-black" style="width: 100%"></div>
+        </div>
+      </div>
+      <div class="col position-relative">
+        <div class="number-circle mx-auto"><span>3</span></div>
+        <div class="description">填寫資料</div>
+        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0"
+          aria-valuemax="100">
+          <div class="progress-bar bg-black" style="width: 50%"></div>
+        </div>
+      </div>
+      <div class="col  position-relativ">
+        <div class="number-circle-1 mx-auto"><span>4</span></div>
+        <div class="description">完成訂購</div>
+      </div>
+    </div>
+    <main class="container p-5">
+      <div class="bg-light p-5">
+        <div class="row">
+          <div class="mb-3">
+            <label for="name" class="form-label">您的姓名</label>
+            <input type="name" class="form-control" id="name" placeholder="請輸入姓名">
+          </div>
+          <div class="mb-3">
+            <label for="phonenumber" class="form-label">手機號碼</label>
+            <textarea class="form-control" id="phone_number" rows="1" placeholder="請輸入您的電話號碼"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="Email" class="form-label">Email</label>
+            <input type="Email" class="form-control" id="email" placeholder="請輸入您的Email">
+          </div>
+          <div class="mb-3 col-6">
+            <label for="address " class="form-label">您的地址</label>
+            <input type="address" class="form-control" id="address_number" placeholder="所在國家">
+          </div>
+          <div class="mb-3 col-6">
+            <label for="address" class="form-label "></label>
+            <input type="address" class="form-control" id="address01" placeholder="鄉鎮市">
+          </div>
+          <div class="mb-3 ">
+            <input type="address" class="form-control" id="address02" placeholder="詳細地址">
+          </div>
+
+    </main>
+    <hr>
+    <div class="receipt p-1 p-md-5">
+      <div class="row row-cols-3">
+        <div class="col-8"></div>
+        <div class="col-3 text-start">數量：</div>
+        <div class="col-1 text-end" id="showquantity"></div> <!-- 這裡的ID對應於總數量 -->
+      </div>
+      <div class="row row-cols-3">
+        <div class="col-8"></div>
+        <div class="col-3 text-start">小計：</div>
+        <div id="showcash" class="col-1 text-end">$0</div> <!-- 這裡的ID對應於小計 -->
+      </div>
+      <div class="row row-cols-3">
+        <div class="col-8"></div>
+        <div class="col-3 text-start">運費：</div>
+        <div id="showfreight" class="col-1 text-end">$0</div>
+      </div>
+      <div class="row row-cols-3">
+        <div class="col-8"></div>
+        <div class="col-3 text-start">總計：</div>
+        <div id="showtotal" class="col-1 text-end">$0</div> <!-- 這裡的ID對應於總計 -->
+      </div>
+
+      <div class="button p-4">
+        <div class="row row-col-3">
+          <a href="./Bs-cart-2.html" type="button" class="col btn btn-outline-dark fs-4">上一步</a>
+          <div class="col col-lg-8"></div>
+          <button class="col btn btn-dark fs-4" type="button" id="stepbtn">下一步</a>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <i class="bi bi-arrow-left">
+      <a href="./Bs-homepage.html" class="link-secondary">返回購物</a></i>
+    </div>
+    </div>
+
+  </main>
+  </div>
+  </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="./js/Bs-cart-3.js"></script>
+
+</body>
+
+</html>
