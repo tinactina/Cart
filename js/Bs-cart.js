@@ -105,7 +105,7 @@ result.forEach((item) =>{
         <input type="number" class="quantity btn btn-light font-monospace mx-2" min="1" value="1">
         <button type="button" class="subjoin-btn btn btn-light-subtle">+</button>
       </div>
-      <span class="showprice font-monospace ms-3" data-price="${item.price}">$${item.price}</span>
+      <span class="showprice font-monospace ms-3 " data-price="${item.price}">$${item.price}</span>
     </div>
   </div>
 </div>
