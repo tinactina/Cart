@@ -46,7 +46,7 @@
 
 }
 .showprice{
-  font-size: 10px;
+  font-size: 14px;
   color:  rgb(75, 74, 74);
   white-space: nowrap; /* 防止價格換行 */
 }

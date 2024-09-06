@@ -47,7 +47,7 @@ showshop.forEach((item, index) => {
             </div>
           </div>
           <!-- 價格顯示 -->
-          <span class="showprice font-monospace">$${parseInt(shopquantity[index]) * parseInt(item.price)}</span>
+          <span class="showprice font-monospace ">$${parseInt(shopquantity[index]) * parseInt(item.price)}</span>
         </div>
       </div>
     </div>
