@@ -157,31 +157,39 @@ let people = {
 
 let stepbtn = document.querySelector('#stepbtn');
 stepbtn.addEventListener('click', function () {
-    //console.log(people)
-    people.name = document.querySelector('#name').value;
-    people.phone_number = document.querySelector('#phone_number').value;
-    people.email = document.querySelector('#email').value;
-    people.address_city = document.querySelector('#address_number').value;
-    people.address_country = document.querySelector('#address01').value;
-    people.address = document.querySelector('#address02').value;
+    let people = {
+        name: document.querySelector('#name').value,
+        phone_number: document.querySelector('#phone_number').value,
+        email: document.querySelector('#email').value,
+        address_city: document.querySelector('#address_number').value,
+        address_country: document.querySelector('#address01').value,
+        address: document.querySelector('#address02').value
+    };
 
+    console.log('儲存的資料:', people); // 確認資料內容
     localStorage.setItem('people', JSON.stringify(people));
 
-    //加入跳轉方法
+    // 確認儲存後的值
+    console.log('儲存後的 localStorage.people:', localStorage.getItem('people'));
+
+    // 加入跳轉方法
     window.location = './Bs-cart-4.html';
 });
 
 
+
 function carttotal() {
     let showtotal = document.querySelector('#showtotal');
-    let showcash = document.querySelector('#showcash');//小計
-    let showfreight = document.querySelector('#showfreight');//運費
-    console.log(showcash.textContent);
-    // 要把錢字號取代成沒有東西
-    let cash = showcash.textContent.replace('$', '');
-    let freight = showfreight.textContent.replace('$', '');
-    showtotal.innerHTML = `$${parseInt(cash) + parseInt(freight)}`;
-}
+    let showcash = document.querySelector('#showcash'); // 小計
+    let showfreight = document.querySelector('#showfreight'); // 運費
 
+    // 取得數字部分，移除錢字號並轉換為數字
+    let cash = parseFloat(showcash.textContent.replace('$', '')) || 0;
+    let freight = parseFloat(showfreight.textContent.replace('$', '')) || 0;
+
+    // 計算並顯示總計
+    let total = cash + freight;
+    showtotal.innerHTML = `$${total}`;
+}
 
 //./Bs-cart-4.html
