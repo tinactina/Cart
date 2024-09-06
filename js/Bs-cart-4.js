@@ -72,24 +72,35 @@ let showshop = shop.filter((item, index) => stepshopping.includes(index));
 // 把過濾後的東西顯示在畫面上
 let cartlist = document.querySelector('#cartlist');
 cartlist.innerHTML = '';
-
 showshop.forEach((item, index) => {
     cartlist.innerHTML += `
-<div class="col-12 d-flex justify-content-between align-items-center py-3 border-bottom">
-   <div class="col-md-8">
-    <div class="card-body me-5">
-      <img src="${item.img}" width="80" alt="...">
-      <p class="card-title">${item.name}</p>
-      <p class="card-text">${item.describe}</p>   
+    <div class="row py-3 border-bottom align-items-center">
+      <!-- 商品資訊 -->
+      <div class="col-12 col-md-8 d-flex align-items-center">
+        <div class="d-flex align-items-center">
+          <img src="${item.img}" width="100" alt="..." class="me-3">
+          <div>
+            <p class="card-title mb-1 text-nowrap">${item.name}</p>
+            <p class="card-text mb-0 text-nowrap">${item.describe}</p>   
+          </div>
+        </div>
+      </div>
+      <!-- 價格和數量 -->
+      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center mt-3 mt-md-0">
+        <div class="d-flex align-items-center">
+          <!-- 數量輸入框 -->
+          <div class="btn-toolbar me-2" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group" role="group" aria-label="Quantity controls">
+              <input type="number" min="1" value="${parseInt(shopquantity[index])}" class="quantity form-control" disabled="readonly">
+            </div>
+          </div>
+          <!-- 價格顯示 -->
+          <span class="showprice font-monospace">$${parseInt(shopquantity[index]) * parseInt(item.price)}</span>
+        </div>
+      </div>
     </div>
-  </div>
-  <div>
-  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-    <div class="btn-group ms-auto" role="group" aria-label="First group">
-      <div class="card-text me-5 ">
-      <input type="number" min="1" value="${parseInt(shopquantity[index])}" class="quantity" disabled="readonly">
-      <span class="showprice">$${parseInt(shopquantity[index]) * parseInt(item.price)}</span>        </div>
-`;
+    `;
+    
 });
 
 // paymothod付款方式
@@ -134,12 +145,9 @@ if (delivery && delivery.value) {
 }
 
 
-
-
-
 cartdeliver.innerHTML += `
-<div class="col-12">付款方式: 🆅已付款- ${showstring01}</div>
-<div class="col-12">寄送方式: ${showstring02}</div>
+<div class="col-12 fs-6">付款方式: 🆅 已付款 ｜ ${showstring01}</div>
+<div class="col-12 fs-6 p-3">寄送方式: ${showstring02}</div>
 <hr>
 `;
 

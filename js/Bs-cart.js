@@ -86,23 +86,31 @@ let cartlist = document.querySelector('#cartlist');
 result.forEach((item) =>{
   console.log(item.name);
   cartlist.innerHTML += `
-  <div class="col-12 d-flex justify-content-between align-items-center py-3 border-bottom">
-         <div class="col-md-8">
-          <div class="card-body me-5">
-            <img src="${item.img}" width="80" alt="...">
-            <p class="card-title">${item.name}</p>
-            <p class="card-text">${item.describe}</p>   
-          </div>
-        </div>
-        <div>
-        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-          <div class="btn-group ms-auto" role="group" aria-label="First group">
-            <div class="card-text me-5 ">
-            <button type="button" class="buckle-btn btn btn-light-subtle">-</button>
-            <input type="number" class="quantity btn btn-light" min="1" value="1"></button>
-            <button type="button" class="subjoin-btn btn btn-light-subtle">+</button>
-            <span class="showprice" data-price="${item.price}">$${item.price}</span>
-        </div>
+  <div class="row py-3 border-bottom align-items-center">
+  <!-- 商品資訊 -->
+  <div class="col-12 col-md-8 d-flex align-items-center">
+    <div class="d-flex align-items-center">
+      <img src="${item.img}" width="100" alt="..." class="me-3">
+      <div>
+        <p class="card-title mb-1">${item.name}</p>
+        <p class="card-text mb-0">${item.describe}</p>   
+      </div>
+    </div>
+  </div>
+  <!-- 操作按鈕和價格 -->
+  <div class="col-12 col-md-4 d-flex justify-content-between align-items-center mt-3 mt-md-0">
+    <div class="d-flex align-items-center">
+      <div class="btn-group" role="group" aria-label="Quantity controls">
+        <button type="button" class="buckle-btn btn btn-light-subtle ">-</button>
+        <input type="number" class="quantity btn btn-light font-monospace mx-2" min="1" value="1">
+        <button type="button" class="subjoin-btn btn btn-light-subtle">+</button>
+      </div>
+      <span class="showprice font-monospace ms-3" data-price="${item.price}">$${item.price}</span>
+    </div>
+  </div>
+</div>
+
+
   `;
 });
 // 先綁完單個按鈕的監聽事件，在換成多個

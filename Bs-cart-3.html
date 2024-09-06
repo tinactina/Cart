@@ -15,7 +15,7 @@
   <header>
     <div class="container ">
       <nav class="navbar navbar-expand-lg ">
-        <a class="navbar-brand" href="./Bs-homepage.html">
+        <a class="navbar-brand" href="./index.html">
           <img src="./img/情感釀造所-01.png" alt="情感釀造所 Logo" width="250">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -52,102 +52,106 @@
     </nav>
   </header>
   <main class="container bg-light p-1 p-md-5 fs-4 m-5 d-block">
-    <h4>購 物 車</h4>
+    <h5>購物車</h5>
     <div class="row row-cols-4 text-center my-5">
       <div class="col position-relative">
-        <div class="number-circle mx-auto"><span>1</span></div>
-        <div class="description">確認購物車</div>
+        <div class="number-circle mx-auto fs-4"><span>1</span></div>
+        <div class="description fs-5">確認購物車</div>
         <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0"
           aria-valuemax="100">
           <div class="progress-bar bg-black" style="width: 100%"></div>
         </div>
       </div>
       <div class="col position-relative">
-        <div class="number-circle mx-auto"><span>2</span></div>
-        <div class="description">付款與運送方式</div>
+        <div class="number-circle mx-auto fs-4"><span>2</span></div>
+        <div class="description fs-5">付款與運送方式</div>
         <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0"
           aria-valuemax="100">
           <div class="progress-bar bg-black" style="width: 100%"></div>
         </div>
       </div>
       <div class="col position-relative">
-        <div class="number-circle mx-auto"><span>3</span></div>
-        <div class="description">填寫資料</div>
+        <div class="number-circle mx-auto fs-4"><span>3</span></div>
+        <div class="description fs-5">填寫資料</div>
         <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0"
           aria-valuemax="100">
           <div class="progress-bar bg-black" style="width: 50%"></div>
         </div>
       </div>
       <div class="col  position-relativ">
-        <div class="number-circle-1 mx-auto"><span>4</span></div>
-        <div class="description">完成訂購</div>
+        <div class="number-circle-1 mx-auto fs-4"><span>4</span></div>
+        <div class="description fs-5">完成訂購</div>
       </div>
     </div>
     <main class="container p-5">
       <div class="bg-light p-5">
         <div class="row">
-          <div class="mb-3">
-            <label for="name" class="form-label">您的姓名</label>
+          <div class="mb-3 fs-6">
+            <label for="name" class="form-label">您的姓名 Your Name</label>
             <input type="name" class="form-control" id="name" placeholder="請輸入姓名">
           </div>
-          <div class="mb-3">
-            <label for="phonenumber" class="form-label">手機號碼</label>
+          <div class="mb-3 fs-6">
+            <label for="phonenumber" class="form-label">手機號碼 Phone-Number</label>
             <textarea class="form-control" id="phone_number" rows="1" placeholder="請輸入您的電話號碼"></textarea>
           </div>
-          <div class="mb-3">
-            <label for="Email" class="form-label">Email</label>
+          <div class="mb-3 fs-6">
+            <label for="Email" class="form-label">電子郵件 E-mail</label>
             <input type="Email" class="form-control" id="email" placeholder="請輸入您的Email">
           </div>
-          <div class="mb-3 col-6">
-            <label for="address " class="form-label">您的地址</label>
+          <div class="mb-3 col-6 fs-6">
+            <label for="address " class="form-label">您的地址 Address</label>
             <input type="address" class="form-control" id="address_number" placeholder="所在國家">
           </div>
-          <div class="mb-3 col-6">
+          <div class="mb-3 col-6 fs-6">
             <label for="address" class="form-label "></label>
             <input type="address" class="form-control" id="address01" placeholder="鄉鎮市">
           </div>
-          <div class="mb-3 ">
+          <div class="mb-3 fs-6">
             <input type="address" class="form-control" id="address02" placeholder="詳細地址">
           </div>
 
     </main>
     <hr>
-    <div class="receipt p-1 p-md-5">
-      <div class="row row-cols-3">
-        <div class="col-8"></div>
-        <div class="col-3 text-start">數量：</div>
-        <div class="col-1 text-end" id="showquantity"></div> <!-- 這裡的ID對應於總數量 -->
-      </div>
-      <div class="row row-cols-3">
-        <div class="col-8"></div>
-        <div class="col-3 text-start">小計：</div>
-        <div id="showcash" class="col-1 text-end">$0</div> <!-- 這裡的ID對應於小計 -->
-      </div>
-      <div class="row row-cols-3">
-        <div class="col-8"></div>
-        <div class="col-3 text-start">運費：</div>
-        <div id="showfreight" class="col-1 text-end">$0</div>
-      </div>
-      <div class="row row-cols-3">
-        <div class="col-8"></div>
-        <div class="col-3 text-start">總計：</div>
-        <div id="showtotal" class="col-1 text-end">$0</div> <!-- 這裡的ID對應於總計 -->
-      </div>
+    <div class="receipt p-1 p-md-5 fs-6 ">
+      <div class="container">
+        <!-- 數量 -->
+        <div class="row align-items-center mb-2">
+          <div class="col-12 col-md-8"></div>
+          <div class="col-12 col-md-3 text-start text-md-end">數量：</div>
+          <div class="col-12 col-md-1 text-start text-md-end font-monospace" id="showquantity"></div>
+        </div>
+        <div class="row align-items-center mb-2">
+          <div class="col-12 col-md-8"></div>
+          <div class="col-12 col-md-3 text-start text-md-end">小計：</div>
+          <div class="col-12 col-md-1 text-start text-md-end font-monospace" id="showcash">$</div>
+        </div>
 
-      <div class="button p-4">
-        <div class="row row-col-3">
-          <a href="./Bs-cart-2.html" type="button" class="col btn btn-outline-dark fs-4">上一步</a>
-          <div class="col col-lg-8"></div>
-          <button class="col btn btn-dark fs-4" type="button" id="stepbtn">下一步</a>
+        <div class="row align-items-center mb-2">
+          <div class="col-12 col-md-8"></div>
+          <div class="col-12 col-md-3 text-start text-md-end">運費：</div>
+          <div class="col-12 col-md-1 text-start text-md-end font-monospace" id="showfreight">$0</div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-12 col-md-8"></div>
+          <div class="col-12 col-md-3 text-start text-md-end">總計：</div>
+          <div class="col-12 col-md-1 text-start text-md-end font-monospace" id="showtotal">$</div>
         </div>
       </div>
-    </div>
-    <hr>
-    <i class="bi bi-arrow-left">
-      <a href="./Bs-homepage.html" class="link-secondary">返回購物</a></i>
-    </div>
-    </div>
 
+        <div class="button p-4">
+          <div class="row row-col-3">
+            <a href="./Bs-cart-2.html" type="button" class="col btn btn-outline-dark fs-6">上一步</a>
+            <div class="col col-lg-8"></div>
+            <a href="./Bs-cart-4.html" type="button" class="col btn btn-dark fs-6" id="next_btn">下一步</a>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <i class="bi bi-arrow-left fs-6">
+        <a href="./index.html" class="link-secondary">返回購物</a></i>
+    </div>
+    </div>
+  </div>
   </main>
   </div>
   </div>
